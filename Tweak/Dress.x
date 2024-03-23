@@ -358,7 +358,7 @@
 %hook CSTeachableMomentsContainerView
 
 - (void)_layoutCallToActionLabel { // hide and set unlock text on homebar devices
-	
+
 	%orig;
 
 	if (hideUnlockTextSwitch) {
@@ -447,7 +447,7 @@
 		SBUILegibilityLabel* label = [self valueForKey:@"_label"];
 		[label setTextColor:[GcColorPickerUtils colorWithHex:unlockTextColorValue]];
 	}
-    
+
 	if (![unlockTextInput isEqual:@""]) {
 		[self setText:unlockTextInput];
 		return;
@@ -497,7 +497,7 @@
 		[timeformat setDateFormat:lastTimeUnlockedFormatValue];
 		currentTime = [timeformat stringFromDate:[NSDate date]];
 		[preferences setObject:currentTime forKey:@"lastTimeUnlockedValue"];
-	}	
+	}
 
 }
 
@@ -705,7 +705,7 @@
 		return [customQuickActionsXAxisValueControl doubleValue];
 	else
 		return %orig;
-	
+
 }
 
 - (CGFloat)_insetY { // change quick actions y position
@@ -714,7 +714,7 @@
 		return [customQuickActionsYAxisValueControl doubleValue];
 	else
 		return %orig;
-	
+
 }
 
 %end

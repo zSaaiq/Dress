@@ -6,7 +6,7 @@
 
     [super viewDidLoad];
 
-    self.appearanceSettings = [DRSAppearanceSettings new];
+    self.appearanceSettings = [HBAppearanceSettings new];
     self.hb_appearanceSettings = [self appearanceSettings];
 
     self.blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
@@ -60,23 +60,23 @@
 }
 
 - (void)showTimeFontPicker {
-    
+
     self.timeFontPicker = [UIFontPickerViewController new];
     [[self timeFontPicker] setDelegate:self];
     [self presentViewController:[self timeFontPicker] animated:YES completion:nil];
-    
+
 }
 
 - (void)showDateFontPicker {
-    
+
     self.dateFontPicker = [UIFontPickerViewController new];
     [[self dateFontPicker] setDelegate:self];
     [self presentViewController:[self dateFontPicker] animated:YES completion:nil];
-    
+
 }
 
 - (void)fontPickerViewControllerDidPickFont:(UIFontPickerViewController *)viewController {
-    
+
     UIFontDescriptor* descriptor = [viewController selectedFontDescriptor];
     UIFont* font = [UIFont fontWithDescriptor:descriptor size:17];
 
@@ -84,7 +84,7 @@
         [[self preferences] setObject:[font familyName] forKey:@"customChosenTimeFont"];
     else if ([viewController isEqual:[self dateFontPicker]])
         [[self preferences] setObject:[font familyName] forKey:@"customChosenDateFont"];
-    
+
 }
 
 @end

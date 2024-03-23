@@ -2,7 +2,7 @@
 Dress up your lock screen
 
 ## Installation
-1. Add this repository to your Package Manager: https://repo.litten.love
+1. Add this repository to your Package Manager: https://zsaaiq.github.io/jailbreakrepo/
 2. Install Dress
 
 ## Compiling

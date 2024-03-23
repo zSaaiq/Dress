@@ -6,7 +6,7 @@
 
     [super viewDidLoad];
 
-    self.appearanceSettings = [DRSAppearanceSettings new];
+    self.appearanceSettings = [HBAppearanceSettings new];
     self.hb_appearanceSettings = [self appearanceSettings];
 
     self.blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];

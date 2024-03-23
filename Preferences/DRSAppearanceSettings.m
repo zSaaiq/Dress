@@ -1,6 +1,6 @@
 #import "DRSRootListController.h"
 
-@implementation DRSAppearanceSettings
+@implementation HBRootListController
 
 - (UIColor *)tintColor {
 
